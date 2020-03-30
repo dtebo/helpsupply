@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from 'lib/utils/media-queries';
 import { Color, Space } from 'lib/theme';
 
 const styles = {
@@ -6,8 +6,8 @@ const styles = {
     alignItems: 'flex-end',
     backgroundColor: `${Color.CORAL}`,
     display: 'flex',
-    minHeight: '276px',
-    padding: `${Space.S40}px`,
+    minHeight: ['276px', '', 'auto'],
+    padding: [`${Space.S40}px`, '', 0],
     width: '100%',
   }),
 };

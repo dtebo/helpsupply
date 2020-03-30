@@ -4,8 +4,8 @@ import styles from './LargeHeader.styles';
 import { Color } from 'lib/theme';
 import { ReactComponent as Logo } from 'static/icons/logo.svg';
 
-const LargeHeader = () => (
-  <div css={styles.root}>
+const LargeHeader = ({ ...rest }) => (
+  <div css={styles.root} {...rest}>
     <Logo fill={Color.WHITE} />
   </div>
 );
