@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Routes } from 'constants/Routes';
 
 import NewSupplyRequest from 'pages/supplies_new';
-import AdminDropSite from 'pages/dropsite_admin';
+import DropsiteAdmin from 'pages/dropsite_admin';
 import NewFacility from 'pages/facility_new';
 import NewDropSite from 'pages/dropsite_new';
 import EntryPortal from 'pages/entry';
@@ -13,7 +13,6 @@ import Request from 'pages/request';
 import SignUp from 'pages/signup';
 
 import HCPSignupFinish from './components/HCPSignupFinish';
-import DropSite from './components/DropSite';
 import PendingDomains from './components/PendingDomains';
 import NoMatch from './components/NoMatch';
 import Login from './components/Login';
@@ -46,11 +45,11 @@ function App({ backend }) {
               <HCPSignupFinish backend={backend} />
             </Route>
             <Route path={Routes.DROPSITE_ADMIN}>
-              <AdminDropSite backend={backend} />
+              <DropsiteAdmin backend={backend} />
             </Route>
-            <Route path={Routes.DROPSITE_DETAIL}>
-              <DropSite backend={backend} />
-            </Route>
+            {/* <Route path={Routes.DROPSITE_DETAIL}>
+              <Dropsite backend={backend} />
+            </Route> */}
             <Route path={Routes.PROFILE}>
               <Profile backend={backend} />
             </Route>
